@@ -1,0 +1,817 @@
+/*--------------------------------------------
+
+1. BLACK:	#1F1F1F;
+2. RED: 	#C45445;
+3. BEIGE: 	#D0B17A;
+4. WHITE: 	#FCFEEB;
+
+---------------------------------------------*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	color: #1F1F1F;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+section {
+	padding: 100px 10%;
+}
+
+.heading {
+	font-family: 'Dancing Script', cursive;
+	color: #C45445;
+	position: relative;
+	margin-left: 10px;
+	margin-bottom: -25px;
+	font-size:50px;
+	z-index: 998;
+}
+
+h2 {
+	color: #1F1F1F;
+	font-weight: 600;
+	margin-bottom: 30px;
+	font-size:30px;
+}
+
+p {
+	line-height: 25px;
+}
+
+/*--------------------------------------------------------------------------------
+								PRELOADER
+---------------------------------------------------------------------------------*/
+
+.loader {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #FCFEEB;
+	z-index: 9999;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background-color: #C45445;
+	transform: scale(1);
+	z-index: 9999;
+    animation: pulse 1s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle h2 {
+	font-size: 5em;
+	color: #D0B17A;
+	position: relative;
+	margin-bottom: 0;
+}
+
+@keyframes pulse {
+     0% {
+        transform: scale(0.8);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+    
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+    
+    100% {
+        transform: scale(0.8);
+        box-shadow: 0px 0px 5px 25px rgba(196,84,69,1);
+    }
+}
+
+
+/*--------------------------------------------------------------------------------
+								NAVIGATION
+---------------------------------------------------------------------------------*/
+
+#nav {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all .3s ease-in-out;
+	z-index: 999;
+}
+
+#nav h3 {
+	font-family: 'Dancing Script', cursive;
+	color: #D0B17A;
+	font-size: 50px;
+	margin-left: 60px;
+	transition: all .3s ease-in-out;
+}
+
+#list {
+	margin-right: 50px;
+	transition: all .3s ease-in-out;
+}
+
+#list li {
+	display: inline-block;
+	padding: 30px 20px;
+	transition: all .3s ease-in-out;
+}
+
+#list li a {
+	color: #FCFEEB;
+	transition: all .3s ease-in-out;
+}
+
+#list li a:hover {
+	color: #D0B17A;
+}
+
+#nav.new {
+	background-color: #1F1F1F;
+	transition: all .3s ease-in-out;
+}
+
+#nav.new h3 {
+	font-family: 'Dancing Script', cursive;
+	color: #D0B17A;
+	font-size: 40px;
+	margin-left: 50px;
+	transition: all .3s ease-in-out;
+}
+
+#nav.new #list {
+	margin-right: 40px;
+	transition: all .3s ease-in-out;
+}
+
+#nav.new #list li {
+	display: inline-block;
+	padding: 20px 20px;
+	transition: all .3s ease-in-out;
+}
+
+.toggle {
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle i {
+	color: #FCFEEB;
+	font-size: 20px;
+}
+
+.toggle-nav {
+	position: fixed;
+	top: -548px;
+	left: 0;
+	right: 0;
+	height: 500px;
+	background-color: #1F1F1F;
+	width: 100vw;
+	z-index: 10;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav-open li {
+	list-style: none;
+	padding: 20px 0;
+	transition: all .3s ease-in-out;
+}
+
+#nav-open li a {
+	color: #FCFEEB;
+	transition: all .3s ease-in-out;
+}
+
+#nav-open li a:hover {
+	color: #D0B17A;
+}
+
+.slide {
+	display: flex;
+	animation: slideDown .5s forwards linear;
+}
+
+@keyframes slideDown {
+	from {
+		top: -548px;
+	}
+	to {
+		top: 48px;
+	}
+}
+
+/*--------------------------------------------------------------------------------
+								LANDING
+---------------------------------------------------------------------------------*/
+
+header {
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: -1;
+	transition: all .5s ease-in-out;
+}
+
+h1 {
+	font-size: 15em;
+	color: #D0B17A;
+	font-family: 'Dancing Script', cursive;
+	position: relative;
+	margin-bottom: -40px;
+	z-index: 0;
+}
+
+header h2 {
+	color: #FCFEEB;
+	font-size: 20px;
+}
+
+/*--------------------------------------------------------------------------------
+								ABOUT
+---------------------------------------------------------------------------------*/
+
+#about {
+	background-color: #FCFEEB;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.about-images {
+	display: flex;
+	justify-content: space-around;
+	margin-right: 30px;
+}
+
+.about-images div {
+	width: 250px;
+	height: 400px;
+	background-color: black;
+}
+
+.about-img1 {
+	margin-right: 20px;
+	background-image: url(images/about-img1.jpg);
+	background-size: cover;
+	background-position: center;
+	animation-delay: .3s;
+}
+
+.about-img2 {
+	margin-top: 50px;
+	background-image: url(images/about-img2.jpg);
+	background-size: cover;
+	background-position: center;
+	animation-delay: .6s;
+}
+
+.about-text {
+	width: 45%;
+}
+
+.about-text h2 {
+	color: #1F1F1F;
+	font-weight: 600;
+	margin-bottom: 30px;
+	font-size:30px;
+}
+
+/*--------------------------------------------------------------------------------
+								ICONS
+---------------------------------------------------------------------------------*/
+
+#icons {
+	padding: 50px 10%;
+	background-color: #C45445;
+	display: flex;
+	justify-content: space-around;
+}
+
+.icons-card {
+	text-align: left;
+}
+
+.icons-card h3 {
+	font-size: 25px;
+	color: #FCFEEB;
+}
+
+.icons-card div img {
+	width: 150px;
+	margin-right: 30px;
+}
+
+
+.icons-card div h2 {
+	font-weight: 700;
+	font-size: 45px;
+	color: #D0B17A;
+	margin-bottom: 0;
+	position: relative;
+	margin-bottom: -10px;
+}
+
+/*--------------------------------------------------------------------------------
+								CHEFS
+---------------------------------------------------------------------------------*/
+
+#chefs {
+	text-align: center;
+	background-color: #FCFEEB;
+}
+
+#chefs h2 {
+	font-size: 30px;
+}
+
+.chefs-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.chef {
+	width: 30%;
+	margin: 10px;
+}
+
+.chef h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 20px;
+}
+
+.img1 {
+	width: 100%;
+	height: 500px;
+	background-image: url(images/chef1.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.img2 {
+	width: 100%;
+	height: 500px;
+	background-image: url(images/chef2.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.img3 {
+	width: 100%;
+	height: 500px;
+	background-image: url(images/chef3.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.chef1 {
+	animation-delay: .4s;
+}
+
+.chef2 {
+	animation-delay: .7s;
+}
+
+.chef3 {
+	animation-delay: 1s;
+}
+
+/*--------------------------------------------------------------------------------
+								CONTACT
+---------------------------------------------------------------------------------*/
+
+#contact {
+	background-color: #1F1F1F;
+}
+
+#contact h2 {
+	color: #FCFEEB;
+}
+
+.contact-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.contact-container h3 {
+	color: #D0B17A;
+	margin-bottom: 20px;
+}
+
+.contact-container ul li {
+	list-style: none;
+	color: #FCFEEB;
+}
+
+.contact-lists div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-lists .first {
+	margin-right: 40px;
+}
+
+.contact-networks p, .contact-newsletter p {
+	color: #FCFEEB;
+}
+
+.social-icons i {
+	width: 15px;
+	height: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FCFEEB;
+	font-size: 20px;
+	margin: 10px 20px 0 0;
+	background-color: #D0B17A;
+	padding: 10px;
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+}
+
+.social-icons i:hover {
+	color: #D0B17A;
+	background-color: #FCFEEB;
+	padding: 10px;
+	border-radius: 50%;
+	transition: all .3s ease-in-out;
+}
+
+
+.social-icons {
+	display: flex;
+}
+
+.contact-newsletter {
+	width: 30%;
+}
+
+.contact-newsletter input {
+	width: 80%;
+	height: 20px;
+	padding: 10px;
+	background: #FCFEEB;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.contact-newsletter a{
+	margin-top: 30px;
+	padding: 5px 20px;
+	color: #FCFEEB;
+	background-color: #D0B17A;
+	transition: all .3s ease-in-out;
+}
+
+.contact-newsletter a:hover{
+	margin-top: 30px;
+	padding: 5px 20px;
+	color: #D0B17A;
+	background-color: #FCFEEB;
+	transition: all .3s ease-in-out;
+}
+
+.contact-icons {
+	margin-bottom: 20px;
+}
+
+.contact-icons li {
+	display: flex;
+	align-items: center;
+}
+
+.contact-icons i {
+	color: #D0B17A;
+	font-size: 15px;
+	margin-right: 15px;
+}
+
+/*--------------------------------------------------------------------------------
+								RESPONSIVE DESIGN
+---------------------------------------------------------------------------------*/
+
+@media all and (max-width: 1000px) {
+
+	section {
+		padding: 80px 5%;
+	}
+
+	.about-images div {
+		width: 200px;
+		height: 350px;
+	}
+
+}
+
+@media all and (max-width: 900px) {
+
+	#about {
+		flex-direction: column-reverse;
+	}
+
+	.about-text {
+		width: 70%;
+		margin-bottom: 30px;
+	}
+
+	.about-images {
+		margin-right: 0;
+	}
+
+	.about-images div {
+		width: 250px;
+		height: 400px;
+	}
+
+	#icons {
+		padding: 50px;
+	}
+
+}
+
+@media all and (max-width: 800px) {
+
+	.toggle {
+		display: flex;
+		margin-right: 60px;
+	}
+
+	#nav {
+		height: 50px;
+	}
+
+	#list {
+		display: none;
+	}
+
+	#nav h3 {
+		font-family: 'Dancing Script', cursive;
+		color: #D0B17A;
+		font-size: 40px;
+		margin-left: 50px;
+		transition: all .3s ease-in-out;
+	}
+
+	.contact-container {
+		flex-direction: column;
+	}
+
+	.contact-lists, .contact-networks, .contact-newsletter{
+		margin-bottom: 40px;
+	}
+
+	.contact-lists {
+		justify-content: flex-start;
+		width: 80%;
+	}
+
+	.contact-lists .first {
+		margin-right: 30px;
+	}
+
+	.contact-newsletter {
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 750px) {
+
+	.chefs-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.chef {
+		width: 50%;
+	}
+
+	.img1 {
+		height: 300px;
+		background-image: url(images/chef1-responsive.png);
+	}
+
+	.img2 {
+		height: 300px;
+		background-image: url(images/chef2-responsive.png);
+	}
+
+	.img3 {
+		height: 300px;
+		background-image: url(images/chef3-responsive.png);
+	}
+
+}
+
+@media all and (max-width: 600px) {
+
+	section {
+		padding: 50px 5%;
+	}
+
+	.toggle {
+		display: flex;
+		margin-right: 60px;
+	}
+
+	#nav {
+		height: 50px;
+	}
+
+	#list {
+		display: none;
+	}
+
+	#nav h3 {
+		font-family: 'Dancing Script', cursive;
+		color: #D0B17A;
+		font-size: 40px;
+		margin-left: 50px;
+		transition: all .3s ease-in-out;
+	}
+
+	header {
+		height: 80vh;
+	}
+
+	.about-text {
+		width: 80%;
+	}
+
+	.about-images div {
+		width: 200px;
+		height: 350px;
+	}
+
+	#icons {
+		padding: 30px;
+	}
+
+	#icons h2 {
+		font-size: 35px;
+	}
+
+	#icons h3 {
+		font-size: 20px;
+	}
+
+}
+
+@media all and (max-width: 500px) {
+
+	h1 {
+		font-size: 12em;
+	}
+
+	header h2 {
+		font-size: 15px;
+	}
+
+	.chef {
+		width: 70%;
+	}
+
+}
+
+@media all and (max-width: 450px) {
+
+	section {
+		padding: 30px 5%;
+	}
+
+	header {
+		background-position: right;
+	}
+
+	.toggle {
+		display: flex;
+		margin-right: 30px;
+	}
+
+	#nav h3 {
+		margin-left: 30px;
+	}
+
+	.circle {
+		width: 300px;
+		height:300px;
+	}
+
+	.circle h2 {
+		font-size: 4em;
+	}
+
+	.about-images div {
+		width: 150px;
+		height: 250px;
+	}
+
+	.about-text {
+		width: 90%;
+	}
+
+	#icons {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.icons-card {
+		text-align: center;
+	}
+
+}
+
+@media all and (max-width: 400px) {
+
+	h1 {
+		font-size: 10em;
+	}
+
+	header h2 {
+		font-size: 15px;
+	}
+
+	header {
+		height: 70vh;
+		background-position: right;
+	}
+
+	.about-images {
+		flex-direction: column;
+	}
+
+	.about-images div {
+		width: 300px;
+		height: 150px;
+	}
+
+	.about-img1 {
+		margin-right: 0;
+	}
+
+	.about-img2 {
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+
+	.chef {
+		width: 80%;
+	}
+
+}
+
+@media all and (max-width: 350px) {
+
+	.toggle {
+		display: flex;
+		margin-right: 20px;
+	}
+
+	#nav h3 {
+		margin-left: 20px;
+	}
+
+	.circle {
+		width: 200px;
+		height:200px;
+	}
+
+	.circle h2 {
+		font-size: 2em;
+	}
+
+}

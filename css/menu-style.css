@@ -1,0 +1,407 @@
+/*--------------------------------------------
+
+1. BLACK:	#1F1F1F;
+2. RED: 	#C45445;
+3. BEIGE: 	#D0B17A;
+4. WHITE: 	#FCFEEB;
+
+---------------------------------------------*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	color: #1F1F1F;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+section {
+	padding: 50px 10%;
+}
+
+.heading {
+	font-family: 'Dancing Script', cursive;
+	color: #C45445;
+	position: relative;
+	margin-left: 10px;
+	margin-bottom: -25px;
+	font-size:50px;
+	z-index: 998;
+}
+
+h2 {
+	color: #1F1F1F;
+	font-weight: 600;
+	margin-bottom: 30px;
+	font-size:30px;
+}
+
+p {
+	line-height: 25px;
+}
+
+/*--------------------------------------------------------------------------------
+								PRELOADER
+---------------------------------------------------------------------------------*/
+
+.loader {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #FCFEEB;
+	z-index: 9999;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background-color: #C45445;
+	transform: scale(1);
+	z-index: 9999;
+    animation: pulse 1s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle h2 {
+	font-size: 5em;
+	color: #D0B17A;
+	position: relative;
+	margin-bottom: 0;
+}
+
+@keyframes pulse {
+     0% {
+        transform: scale(0.8);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+    
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+    
+    100% {
+        transform: scale(0.8);
+        box-shadow: 0px 0px 5px 25px rgba(196,84,69,1);
+    }
+}
+
+
+/*--------------------------------------------------------------------------------
+								NAVIGATION
+---------------------------------------------------------------------------------*/
+
+#nav {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all .3s ease-in-out;
+	z-index: 999;
+	background-color: #1F1F1F;
+}
+
+#nav h3 {
+	font-family: 'Dancing Script', cursive;
+	color: #D0B17A;
+	font-size: 50px;
+	margin-left: 60px;
+	transition: all .3s ease-in-out;
+}
+
+#list {
+	margin-right: 50px;
+	transition: all .3s ease-in-out;
+}
+
+#list li {
+	display: inline-block;
+	padding: 20px 20px;
+	transition: all .3s ease-in-out;
+}
+
+#list li a {
+	color: #FCFEEB;
+	transition: all .3s ease-in-out;
+}
+
+#list li a:hover {
+	color: #D0B17A;
+}
+
+#nav.new {
+	background-color: #1F1F1F;
+	transition: all .3s ease-in-out;
+}
+
+#nav.new h3 {
+	font-family: 'Dancing Script', cursive;
+	color: #D0B17A;
+	font-size: 40px;
+	margin-left: 50px;
+	transition: all .3s ease-in-out;
+}
+
+#nav.new #list {
+	margin-right: 40px;
+	transition: all .3s ease-in-out;
+}
+
+#nav.new #list li {
+	display: inline-block;
+	padding: 20px 20px;
+	transition: all .3s ease-in-out;
+}
+
+.toggle {
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle i {
+	color: #FCFEEB;
+	font-size: 20px;
+}
+
+.toggle-nav {
+	position: fixed;
+	top: -548px;
+	left: 0;
+	right: 0;
+	height: 500px;
+	background-color: #1F1F1F;
+	width: 100vw;
+	z-index: 10;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav-open li {
+	list-style: none;
+	padding: 20px 0;
+	transition: all .3s ease-in-out;
+}
+
+#nav-open li a {
+	color: #FCFEEB;
+	transition: all .3s ease-in-out;
+}
+
+#nav-open li a:hover {
+	color: #D0B17A;
+}
+
+.slide {
+	display: flex;
+	animation: slideDown .5s forwards linear;
+}
+
+@keyframes slideDown {
+	from {
+		top: -548px;
+	}
+	to {
+		top: 48px;
+	}
+}
+
+/*--------------------------------------------------------------------------------
+								LANDING
+---------------------------------------------------------------------------------*/
+
+header {
+	width: 100%;
+	height: 60vh;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	z-index: -1;
+	transition: all .5s ease-in-out;
+}
+
+h1 {
+	font-size: 15em;
+	color: #D0B17A;
+	font-family: 'Dancing Script', cursive;
+	position: relative;
+	margin-bottom: -50px;
+	z-index: 0;
+}
+
+header h2 {
+	color: #FCFEEB;
+	font-size: 20px;
+}
+
+/*--------------------------------------------------------------------------------
+								GALLERY
+---------------------------------------------------------------------------------*/
+
+#gallery {
+	background-color: #FCFEEB;
+	text-align: center;
+}
+
+#gallery h3 {
+	display: inline;
+	margin: 0 10px;
+	font-weight: 500;
+}
+
+.button {
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0 10px;
+}
+
+.active {
+	color: #D0B17A;
+}
+
+.gallery-container {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.gallery-container img {
+	width: 300px;
+	margin:15px;
+}
+
+/*--------------------------------------------------------------------------------
+								RESPONSIVE DESIGN
+---------------------------------------------------------------------------------*/
+
+@media all and (max-width: 1000px) {
+
+	#gallery {
+		padding: 50px 5%;
+	}
+
+	.gallery-container img {
+		width: 250px;
+		margin: 10px;
+	}
+
+}
+
+@media all and (max-width: 800px) {
+
+	.toggle {
+		display: flex;
+		margin-right: 60px;
+	}
+
+	#nav {
+		height: 50px;
+	}
+
+	#list {
+		display: none;
+	}
+
+}
+
+@media all and (max-width: 750px) {
+
+	.button {
+		font-size: 15px;
+	}
+}
+
+@media all and (max-width: 650px) {
+
+	.gallery-container img {
+		width: 200px;
+		margin: 5px;
+	}
+}
+
+@media all and (max-width: 500px) {
+
+	h1 {
+		font-size: 12em;
+	}
+
+}
+
+@media all and (max-width: 450px) {
+
+	section {
+		padding: 30px 5%;
+	}
+
+	header {
+		background-position: right;
+	}
+
+	.circle {
+		width: 300px;
+		height:300px;
+	}
+
+	.circle h2 {
+		font-size: 4em;
+	}
+
+	.gallery-container img {
+		width: 300px;
+	}
+
+}
+
+@media all and (max-width: 400px) {
+
+	h1 {
+		font-size: 10em;
+	}
+
+	header {
+		background-position: right;
+	}
+
+}
+
+@media all and (max-width: 320px) {
+
+	.gallery-container img {
+		width: 250px;
+	}
+
+	.circle {
+		width: 200px;
+		height:200px;
+	}
+
+	.circle h2 {
+		font-size: 2em;
+	}
+
+}
