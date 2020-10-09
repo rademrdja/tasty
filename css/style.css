@@ -35,7 +35,7 @@ section {
 	margin-left: 10px;
 	margin-bottom: -25px;
 	font-size:50px;
-	z-index: 998;
+	z-index: -1;
 }
 
 h2 {
@@ -118,7 +118,7 @@ p {
 	justify-content: space-between;
 	align-items: center;
 	transition: all .3s ease-in-out;
-	z-index: 999;
+	z-index: 99;
 }
 
 #nav h3 {
@@ -152,6 +152,8 @@ p {
 #nav.new {
 	background-color: #1F1F1F;
 	transition: all .3s ease-in-out;
+	position:fixed;
+	z-index:99;
 }
 
 #nav.new h3 {
@@ -192,7 +194,7 @@ p {
 	height: 500px;
 	background-color: #1F1F1F;
 	width: 100vw;
-	z-index: 998;
+	z-index: 98;
 	display: none;
 	justify-content: center;
 	align-items: center;
